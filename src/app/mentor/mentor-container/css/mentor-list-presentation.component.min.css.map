@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAA;EACE,UAAU,EAAE,MAAM;CACrB;;AACD,AAAA,aAAa,CAAA;EACT,MAAM,EAAE,IAAI;EACZ,eAAe,EAAE,GAAG;CACvB",
+    "sources": [
+        "../mentor-list-presentation/mentor-list-presentation.component.scss"
+    ],
+    "names": [],
+    "file": "mentor-list-presentation.component.min.css"
+}

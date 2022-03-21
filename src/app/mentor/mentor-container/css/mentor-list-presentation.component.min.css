@@ -1,0 +1,11 @@
+h2 {
+  text-align: center;
+}
+
+.Formcontiner {
+  margin: 2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+/*# sourceMappingURL=mentor-list-presentation.component.min.css.map */

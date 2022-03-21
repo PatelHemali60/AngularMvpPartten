@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACV,gBAAgB,EAAE,IAAI;EACtB,OAAO,EAAE,MAAM;EAEf,UAAU,EAAE,mBAAmB,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,EAAE,mBAAmB,CAAC,GAAG,CAAE,KAAI,CAAC,IAAI,EAAE,mBAAmB,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,EAAE,mBAAmB,CAAC,GAAG,CAAC,IAAI,CAAC,IAAI,EAAE,mBAAmB,CAAC,GAAG,CAAE,IAAG,CAAC,GAAG;CACxL;;AACD,AAAA,aAAa,CAAC;EACZ,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "../modalpopup/modalpopup.component.scss"
+    ],
+    "names": [],
+    "file": "modalpopup.component.min.css"
+}

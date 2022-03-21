@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,KAAK;CAGxB;;AACD,AAAA,aAAa,CAAA;EACX,gBAAgB,EAAE,KAAK;CACxB",
+    "sources": [
+        "../users-form/users-form.component.scss"
+    ],
+    "names": [],
+    "file": "users-form.component.min.css"
+}

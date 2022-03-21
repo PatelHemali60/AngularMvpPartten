@@ -1,0 +1,11 @@
+<p>mentor-container works!</p>
+
+<div class="container-fluid p-4">
+
+  <app-mentor-list-presentation  [mentorList]="mentorList$ | async"
+  (delete)="deleteMentor($event)"
+  (addMentors)="addmentor($event)"
+  (editMentors)="editMentor($event)"
+     > </app-mentor-list-presentation>
+
+</div>

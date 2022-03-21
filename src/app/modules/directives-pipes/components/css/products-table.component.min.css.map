@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,yBAAyB,CAAA;EACrB,OAAO,EAAE,WAAW;CAKvB;;AAND,AAGI,yBAHqB,CAGrB,CAAC,CAAA;EACG,MAAM,EAAE,OAAO;CAClB",
+    "sources": [
+        "../products-table/products-table.component.scss"
+    ],
+    "names": [],
+    "file": "products-table.component.min.css"
+}

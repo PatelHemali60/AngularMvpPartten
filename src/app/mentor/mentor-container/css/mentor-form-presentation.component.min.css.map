@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,MAAM;CAElB",
+    "sources": [
+        "../mentor-form-presentation/mentor-form-presentation.component.scss"
+    ],
+    "names": [],
+    "file": "mentor-form-presentation.component.min.css"
+}

@@ -1,0 +1,53 @@
+.header-container {
+  width: 100%;
+}
+
+.searchbox {
+  width: 350px;
+  height: 45px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #bebfc4;
+  border-radius: 0.625rem;
+  padding: 1rem 1.2rem;
+}
+
+.searchbox span {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-right: 4px;
+  color: #887a7a;
+}
+
+.searchbox input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 40px;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+}
+
+input:focus ~ span {
+  color: #f06ca9;
+}
+
+@media screen and (max-width: 576px) {
+  .user-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .user-header .btn {
+    margin-top: 0.6rem;
+  }
+}
+/*# sourceMappingURL=users-lists.component.min.css.map */

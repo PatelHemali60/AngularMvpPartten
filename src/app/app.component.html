@@ -1,0 +1,16 @@
+<div class="main-wrapper d-flex">
+    <!-- <div id="menu-btn-icon">
+        <label for="menu-btn"><span class="far fa-bars"></span></label>
+    </div> -->
+    <label id="menu-btn-icon" for="menu-btn"><span class="far fa-bars"></span></label>
+    <input type="checkbox" id="menu-btn" />
+    <div class="drawer-menu">
+        <app-side-bar></app-side-bar>
+    </div>
+    <main class="content-wrapper d-flex-col flex-grow">
+        <!-- <app-header></app-header> -->
+        <!-- <div class="outlet"> -->
+        <router-outlet></router-outlet>
+        <!-- </div> -->
+    </main>
+</div>

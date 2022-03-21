@@ -1,0 +1,31 @@
+<!-- <p>ngtemplate-demo works!</p> -->
+
+<div class="continer-ng text-center">
+
+
+
+    <p class="main-heding "> {{ title }} </p>
+    <div class="card">
+        <!-- <button class="btn btn-primary"> Click me</button> -->
+
+
+        <h3 class="heading">ng-template with directive ngFor</h3>
+        <!-- {{ title2 }} -->
+        <ng-template ngFor let-student [ngForOf]="students" let-i="index">
+            <!-- [ng-class]="list" -->
+            <ul class="list">
+                <li>{{i + 1}}. {{student.name}} : {{student.stream}} </li>
+            </ul>
+        </ng-template>
+    </div>
+
+    <div class="card">
+
+        <h3 class="heading"> ng-template with directive ngIf</h3>
+        <ul *ngFor="let student of students; let i = index">
+            <ng-template [ngIf]="student.stream == 'commerce'">
+                <li class="list">{{student.name}} : {{student.stream}}</li>
+            </ng-template>
+        </ul>
+    </div>
+</div>

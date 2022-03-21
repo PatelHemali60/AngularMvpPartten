@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../demo-ng-template-outlet/demo-ng-template-outlet.component.scss"
+    ],
+    "names": [],
+    "file": "demo-ng-template-outlet.component.min.css"
+}
