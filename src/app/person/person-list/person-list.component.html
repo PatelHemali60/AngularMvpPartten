@@ -7,12 +7,15 @@
             <th>Name</th>
             <th>Email</th>
             <th>age</th>
+            <th colspan="2" style="text-align: center;"> Action</th>
         </tr>
-        <tr>
-            <td>{{ data }}</td>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
+        <tr *ngFor="let listData of person; let i = index">
+            <td>{{ i }}</td>
+            <td>{{ listData.name}}</td>
+            <td>{{  listData.age}}</td>
+            <td>{{  listData.gender}}</td>
+            <td><button  (click)="edit(i)">Edit</button></td>
+            <td><button (click)="deleteData(i)">Delete</button></td>
         </tr>
     </table>
 </div>

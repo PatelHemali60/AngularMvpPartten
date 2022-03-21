@@ -1,24 +1,28 @@
 import { Injectable } from '@angular/core';
 import { Form } from '@angular/forms';
 import { Observable, Subject } from 'rxjs';
+import { Person } from './person.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+
+@Injectable()
+
 export class PersonService {
 
-  private subject = new Subject<any>();
+  public subject$ = new Subject<Person>();
+ public EditData$ = new Subject<Person>();
 
   constructor() { }
 
 
-  sendData(data:any){
-   return this.subject.next(data)
- 
+//creat methods using subject
+  sendData(data: Person){
+   return this.subject$.next(data)
+  }
+
+  editdata(data : Person){
+    return this.EditData$.next(data)
   }
   
 
-  receivedData(): Observable<string>{
-   return this.subject.asObservable()
-  }
+ 
 }
