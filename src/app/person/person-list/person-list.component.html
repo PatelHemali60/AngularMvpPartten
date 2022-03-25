@@ -1,5 +1,5 @@
-<p>person-list works!</p>
-<div class="tableList">
+<p>person-list </p>
+<div class="tableList ">
     <table class="border">
         <tr>
 
@@ -14,8 +14,8 @@
             <td>{{ listData.name}}</td>
             <td>{{  listData.age}}</td>
             <td>{{  listData.gender}}</td>
-            <td><button  (click)="edit(i)">Edit</button></td>
-            <td><button (click)="deleteData(i)">Delete</button></td>
+            <td><span class="icon-pencil" (click)="edit(i)"></span></td>
+            <td><span class="icon-bin "  (click)="deleteData(i)"></span></td>
         </tr>
     </table>
 </div>

@@ -20,6 +20,7 @@ export class MentorFormPresenterService {
   public buildForm() {
     return this.fb.group({
       name: [null, [Validators.required]],
+      email: [null, [Validators.required]],
       age: [null, [Validators.required , Validators.maxLength(2)]],
       gender: [null, [Validators.required]]
     })

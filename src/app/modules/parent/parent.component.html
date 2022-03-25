@@ -1,0 +1,17 @@
+
+<div class="divform h-100">
+
+    <h1>{{ParentTitle}}</h1>
+
+    <div class="divChild">
+        <!-- child one selector-->
+        <app-child-one [ctMsg]="cityMsg" [ctArray]="cityArray" [studentAddMsg]="stdAddMsg"
+            (addStudentEvent)="saveDetail($event)" (sendMsgEvent)="printMsg($event)">
+        </app-child-one>
+    </div>
+
+    <h3 class="text-info fw-bolder "> Data coming from child :</h3>
+    <h4>Name: {{stdFullname}}</h4>
+    <h4>Email: {{email}}</h4>
+    <h4>Massage : {{msg}}</h4>
+</div>

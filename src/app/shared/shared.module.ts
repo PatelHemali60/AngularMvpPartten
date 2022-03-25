@@ -11,6 +11,7 @@ import { PaginateComponent } from './components/paginate/paginate.component';
 import { MaskPhonePipe } from './pipes/mask-phone.pipe';
 import { MaskPhoneDirective } from './directives/mask-phone.directive';
 import { ModalpopupComponent } from './components/modalpopup/modalpopup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { ModalpopupComponent } from './components/modalpopup/modalpopup.componen
     ModalpopupComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     MytitlecasePipe,
@@ -39,6 +42,8 @@ import { ModalpopupComponent } from './components/modalpopup/modalpopup.componen
     PaginateComponent,
     MaskPhonePipe,
     MaskPhoneDirective,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

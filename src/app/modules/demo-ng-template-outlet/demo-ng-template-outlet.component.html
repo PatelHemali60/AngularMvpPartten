@@ -1,1 +1,42 @@
-<p>demo-ng-template-outlet works!</p>
+
+<!-- gn templateREf demo-->
+<!-- Start : Display Mode -->
+<h4 class="text-primary p-2">Display Mode:</h4>
+<select class="form-control bg-light text-primary"  [(ngModel)]="mode">
+    <option *ngFor="let item of modeOptions" [ngValue]="item.mode" >{{item.mode}}</option>
+</select>
+<!-- End : Display Mode -->
+
+<!-- Start : Card view -->
+<ng-template let-items #cardTemplate>
+    <div class="card-wrapper d-flex justify-space-between m-2  ">
+        <div class="card m-1 text-white bg-secondary" *ngFor="let item of items">
+            <div class="card-body">
+                <div class="d-flex justify-space-between p-2 text-info">
+                    <h3>{{item.header}}</h3>
+                </div>
+                <div class="card-title">
+                    <p>{{item.content}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-- End : Card view -->
+
+<!-- Start : List view -->
+<ng-template let-items #listTemplate>
+    <ul class="nav-list m-3  bg-dark text-white">
+        <div class="border p-2">
+            <span class="h5 mr-4 ">No.</span>
+            <span class="h5 ">List</span>
+        </div>
+        <li class="nav-item border p-2" *ngFor="let item of items; let i = index" >
+            <span class="m-3">{{ i }}</span>
+            <span class="m-3">{{item.header}}</span>
+        </li>
+    </ul>
+</ng-template>
+<!-- End : List view -->
+
+<ng-container [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{$implicit:items}"></ng-container>

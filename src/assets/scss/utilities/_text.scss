@@ -13,9 +13,9 @@
   margin-top: -0.25rem;
   margin-bottom: 0.8rem;
 }
-//colored texts
-@each $key, $value in $theme-colors {
-  .text-#{$key} {
-    color: $value;
-  }
-}
+// //colored texts
+// @each $key, $value in $theme-colors {
+//   .text-#{$key} {
+//     color: $value;
+//   }
+// }

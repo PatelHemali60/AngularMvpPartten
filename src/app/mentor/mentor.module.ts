@@ -6,10 +6,16 @@ import { MentorComponent } from './mentor.component';
 import { MentorContainerComponent } from './mentor-container/mentor-container.component';
 import { MentorFormPresentationComponent } from './mentor-container/mentor-form-presentation/mentor-form-presentation.component';
 import { MentorListPresentationComponent } from './mentor-container/mentor-list-presentation/mentor-list-presentation.component';
-import { HttpClientModule } from '@angular/common/http';
+
 import { OverlayModule } from '@angular/cdk/overlay';
-import { ReactiveFormsModule } from '@angular/forms';
+
 import { MentorService } from './mentor.service';
+import { SharedModule } from '../shared/shared.module';
+
+import { FilterPresentationComponent } from './mentor-container/mentor-list-presentation/filter-presentation/filter-presentation.component';
+import { FiltePresnterService } from './mentor-container/mentor-list-presentation/filter-presenter/filte-presnter.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,17 +23,20 @@ import { MentorService } from './mentor.service';
     MentorComponent,
     MentorContainerComponent,
     MentorFormPresentationComponent,
-    MentorListPresentationComponent
+    MentorListPresentationComponent,
+    
+    FilterPresentationComponent,
+    
   ],
   imports: [
     CommonModule,
     MentorRoutingModule,
-    HttpClientModule,
+ReactiveFormsModule,
+FormsModule,
     OverlayModule,
-    ReactiveFormsModule
-  ],
+    ],
   providers: [
-    MentorService
+    MentorService,
   ]
 })
 export class MentorModule { }

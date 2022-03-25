@@ -1,31 +1,30 @@
-<p>person-form works!</p>
+<p>person-form </p>
 
-<div class="container-fluid p-3 divform">
-    <div class="form-modal rounded">
-        <div class="d-flex justify-content-between">
-            <!-- <h2 class="text-center">{{ formTitle }}</h2>
-      <a (click)="onCancel()" class="text-decoration-none">&times;</a> -->
-        </div>
-        <form [formGroup]="personForm">
-           
+<div class="container-fluid p-3 divform ">
+    <div class="form-modal rounded  ">
+      
+        <form [formGroup]="personForm" class="form-width h-100">
+
+            <!-- name section-->
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" formControlName="name">
-
-                <!-- <div *ngIf="( mentorFormControl['name'].dirty ||   mentorFormControl['name'].touched ) &&   mentorFormControl['name'].invalid
-            || isFormSubmitted &&   mentorFormControl['name'].invalid" class="p-1 text-danger">* This Field is Required
-        </div> -->
+<!-- 
+                <div *ngIf="( FormControl['name'].dirty ||   FormControl['name'].touched ) &&   FormControl['name'].invalid" class="p-1 text-danger">* This Field is Required
+                </div> -->
 
             </div>
+            <!-- age section-->
             <div class="mb-3">
                 <label for="age" class="form-label">Age</label>
                 <input type="text" class="form-control" id="age" formControlName="age">
 
-                <!-- <div *ngIf="( mentorFormControl['age'].dirty ||   mentorFormControl['age'].touched ) &&   mentorFormControl['age'].invalid
-            || isFormSubmitted &&   mentorFormControl['age'].invalid" class="p-1 text-danger" ;   else age>* This Field is Required
-       </div>
-       -->
+                <!-- <div *ngIf="( FormControl['age'].dirty ||   FormControl['age'].touched ) &&   FormControl['age'].invalid"    class="p-1 text-danger" >* This Field  is Required
+                </div> -->
+
             </div>
+
+            <!-- gender section-->
             <div class="mb-3">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male"
@@ -39,7 +38,10 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary me-2" (click)="onSubmit()">Submit</button>
+            <!-- <div *ngIf="( FormControl['gender'].dirty ||   FormControl['gender'].touched ) &&   FormControl['gender'].invalid" class="p-1 text-danger">* This Field is
+                Required </div> -->
+
+            <button type="submit" class="btn btn-primary me-2" (click)="onSubmit()" [disabled]="personForm.invalid">Submit</button>
 
         </form>
     </div>

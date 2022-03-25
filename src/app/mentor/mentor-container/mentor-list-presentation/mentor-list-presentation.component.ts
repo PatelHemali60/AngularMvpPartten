@@ -1,24 +1,28 @@
 import { GlobalPositionStrategy, Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { ChangeDetectionStrategy, Component, ComponentRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ComponentRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { take, takeUntil } from 'rxjs/operators';
+
 
 import { mentors, mentorForm, MentorEditDetails } from '../../mentor.model';
 import { MentorFormPresentationComponent } from '../mentor-form-presentation/mentor-form-presentation.component';
 import { MentorListPrenterService } from '../mentor-list-presnter/mentor-list-prenter.service';
+import { FilterPresentationComponent } from './filter-presentation/filter-presentation.component';
+import { FiltePresnterService } from './filter-presenter/filte-presnter.service';
 
 @Component({
   selector: 'app-mentor-list-presentation',
   templateUrl: './mentor-list-presentation.component.html',
   styleUrls: ['./mentor-list-presentation.component.scss'],
-  viewProviders:[MentorListPrenterService],
+  viewProviders: [MentorListPrenterService],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class MentorListPresentationComponent implements OnInit {
   public tempMentorList: mentors[] = [];
+  // public $mentorList: Observable<mentors[]>;
 
   /** tempmentor list for displaying in table declare here */
 
@@ -53,7 +57,8 @@ export class MentorListPresentationComponent implements OnInit {
 
   constructor(
     private mentorlistPresenterService: MentorListPrenterService,
-    private overlay: Overlay
+    private overlay: Overlay,
+    private cdr:ChangeDetectorRef,
   ) {
     this._MentorList = [];
     this.delete = new EventEmitter();
@@ -61,17 +66,39 @@ export class MentorListPresentationComponent implements OnInit {
     this.editMentors = new EventEmitter();
     this.search = new FormControl();
     this.destroy = new Subject();
+
+    //forfilterlist
+    // this.$mentorList = this.mentorlistPresenterService.getFilteredList();
+
   }
 
   ngOnInit(): void {
     this.mentorlistPresenterService.delete$.subscribe((id: number) => {
-      this.delete.emit(id);
+      this.delete.emit(id)
+      //for error cheking
+    
     })
 
     this.search.valueChanges.pipe(takeUntil(this.destroy)).subscribe((searchTerm) => {
       this.searchUser(searchTerm);
     })
+
+    //for filter data subscribe here  
+    this.mentorlistPresenterService.Filter$.subscribe(res=>{
+      const newMentorList= this._MentorList.filter((data)=> data.email == res.email);
+
+      //check wathere data is avilabe or not
+      
+      this._MentorList = newMentorList;  
+
+      // console.log(newMentorList);  
+      this.cdr.detectChanges();
+    }) 
+
+
+
   }
+  //end of ngoninit
 
   /** search user by search term */
   public searchUser(searchTerm: string): void {
@@ -88,11 +115,22 @@ export class MentorListPresentationComponent implements OnInit {
     this.openMentorForm();
   }
 
+  /** on add button open filter */
+  public FilterForm() {
+    // console.log()
+    this.mentorlistPresenterService.openFilterForm();
+    // this.
+  }
+
+
   /** on edit button click */
   public onEdit(item: mentors) {
     this.mentorId = item.id;
     this.openMentorForm(item);
   }
+
+
+
 
   /**
    * open user form dialog
@@ -103,14 +141,9 @@ export class MentorListPresentationComponent implements OnInit {
     let overlayRef: OverlayRef;
     // set overlay config
     let overlayConfig: OverlayConfig = new OverlayConfig();
-     overlayConfig.hasBackdrop = true;
-    //  overlayConfig.positionStrategy
-     
-   
+    overlayConfig.hasBackdrop = true;
 
 
-
-    
     // create overlay reference
     overlayRef = this.overlay.create(overlayConfig);
     const portal: ComponentPortal<MentorFormPresentationComponent> = new ComponentPortal<MentorFormPresentationComponent>(MentorFormPresentationComponent);
@@ -138,10 +171,11 @@ export class MentorListPresentationComponent implements OnInit {
     })
   }
 
-  public ngOnDestroy(): void {
-    this.destroy.next();
-    this.destroy.unsubscribe();
-  }
+
+  // public ngOnDestroy(): void {
+  //   this.destroy.next();
+  //   this.destroy.unsubscribe();
+  // }
 
 
 

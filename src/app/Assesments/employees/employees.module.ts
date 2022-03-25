@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+
 
 import { EmployeesRoutingModule } from './employees-routing.module';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { SupportService } from './services/support.service';
 import { EmployeesService } from './services/employees.service';
 import { SearchPipe } from './pipe/search.pipe';
@@ -22,13 +22,11 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     EmployeesRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
     ModelModule,
     SharedModule,
-    FormsModule
+
   ],
-  providers:[
+  providers: [
     SupportService,
     EmployeesService
   ]

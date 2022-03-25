@@ -1,0 +1,57 @@
+<div class="row h-100 w-100 container-fluid p-3 bg-secondary bg-opacity-75 text-white">
+    <!-- heading-->
+    <h3>{{childTitle}}</h3>
+
+    <div class="list-group border col-lg-12">
+
+        <div >
+            <li class="list-group-item">
+                <h4> {{ctMsg}} </h4>
+            </li>
+
+            <li class="list-group-item  list-group-item-action" *ngFor="let cname of myctArray">
+                {{cname}}
+            </li>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="col-lg-4 border m-3">
+
+
+        <form class="">
+            <h3>{{addMsg}}</h3><br />
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"> First Name:</label>
+                <input (input)="student.fname= getVal($event.target)" class="form-control" /> <br />
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Last name</label>
+
+                <input (input)="student.lname= getVal($event.target)" class="form-control" /> <br />
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">email</label>
+
+                <input (input)="student.email = getVal($event.target)" class="form-control" /> <br />
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="addStudent()">Add Student</button>
+        </form>
+    </div>
+
+
+    <!-- <br />
+    <b>{{message}}</b>
+    <br /> -->
+
+    <!-- div msg-->
+    <div class="p-1 fs-5  ">
+        Message :<input (input)="msg= getVal($event.target)" />
+
+        <button class="btn btn-dark  mx-3" (click)="sendMsg()">Send</button>
+    </div>
+</div>

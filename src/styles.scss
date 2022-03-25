@@ -5,6 +5,12 @@
 @import "assets/scss/utilities/index";
 //base
 @import "assets/scss/base/index";
+
+//boostrap
+@import "../src/assets/scss/vendor/bootstrapBase";
+@import "../src/assets/scss/vendor/bootstrapComponent";
+
+
 //components
 @import "assets/scss/component/index";
 //layout

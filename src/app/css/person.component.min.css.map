@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACZ,MAAM,EAAE,IAAI;CAIZ;;AAED,AAAA,WAAW,CAAC;EACR,UAAU,EAAE,IAAK;EAClB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EAEZ,OAAO,EAAE,IAAI;CACd;;AACD,AAAA,WAAW,CAAC;EACR,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,IAAI;CAEhB",
+    "sources": [
+        "../person/person.component.scss"
+    ],
+    "names": [],
+    "file": "person.component.min.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,KAAK;EACvB,OAAO,EAAE,MAAM;EACf,UAAU,EAAE,qBAAqB,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,EAAE,sBAAsB,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,GAAG;CAE5F",
+    "sources": [
+        "../person-form/person-form.component.scss"
+    ],
+    "names": [],
+    "file": "person-form.component.min.css"
+}

@@ -11,10 +11,15 @@ import { Person } from '../person.model';
 export class PersonFormComponent implements OnInit {
 
   personForm: FormGroup;
+  isFormSubmitted : boolean = false;
 
 
   constructor(private dataservice: PersonService, private fb: FormBuilder) {
+    // this.isFormSubmitted = false;
     this.personForm = this.buildForm();
+    // this.onSubmit();
+     
+
   }
 
   ngOnInit(): void {
@@ -34,22 +39,17 @@ export class PersonFormComponent implements OnInit {
   }
 
   onSubmit() {
-   
+    this.isFormSubmitted = true;
     this.dataservice.sendData(this.personForm.value)
     this.reset();
 
   }
 
-  // Edit Data
-  public editData(){
-   
+  get FormControl(){
+    return this.personForm.controls;
   }
 
-  // public EditData(){
-  //   this.dataservice.EditData$.subscribe((res)=>{
-  //     this.
-  //   })
-  // }
+ 
 
 
   //reset form
