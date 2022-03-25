@@ -1,3 +1,4 @@
+import { DataSource } from '@angular/cdk/collections';
 import { GlobalPositionStrategy, Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ComponentRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
@@ -21,6 +22,10 @@ import { FiltePresnterService } from './filter-presenter/filte-presnter.service'
 })
 
 export class MentorListPresentationComponent implements OnInit {
+
+
+//
+  isActivatedFilter : boolean = false;
   public tempMentorList: mentors[] = [];
   // public $mentorList: Observable<mentors[]>;
 
@@ -58,7 +63,7 @@ export class MentorListPresentationComponent implements OnInit {
   constructor(
     private mentorlistPresenterService: MentorListPrenterService,
     private overlay: Overlay,
-    private cdr:ChangeDetectorRef,
+    private cdr: ChangeDetectorRef,
   ) {
     this._MentorList = [];
     this.delete = new EventEmitter();
@@ -76,7 +81,7 @@ export class MentorListPresentationComponent implements OnInit {
     this.mentorlistPresenterService.delete$.subscribe((id: number) => {
       this.delete.emit(id)
       //for error cheking
-    
+
     })
 
     this.search.valueChanges.pipe(takeUntil(this.destroy)).subscribe((searchTerm) => {
@@ -84,16 +89,15 @@ export class MentorListPresentationComponent implements OnInit {
     })
 
     //for filter data subscribe here  
-    this.mentorlistPresenterService.Filter$.subscribe(res=>{
-      const newMentorList= this._MentorList.filter((data)=> data.email == res.email);
-
+    this.mentorlistPresenterService.Filter$.subscribe(res => {
+       this.isActivatedFilter =true;
       //check wathere data is avilabe or not
-      
-      this._MentorList = newMentorList;  
+
+      this._MentorList = res;
 
       // console.log(newMentorList);  
       this.cdr.detectChanges();
-    }) 
+    })
 
 
 
@@ -118,7 +122,7 @@ export class MentorListPresentationComponent implements OnInit {
   /** on add button open filter */
   public FilterForm() {
     // console.log()
-    this.mentorlistPresenterService.openFilterForm();
+    this.mentorlistPresenterService.openFilterForm(this._MentorList);
     // this.
   }
 

@@ -3,13 +3,13 @@ export class mentors {
     public id: number;
     public name: string;
     public email: string;
-    public age: string;
+    public age: number;
     public gender: string;
     constructor(
       id: number,
       name: string,
       email: string,
-      age: string,
+      age: number,
       gender: string
     ) {
       this.id = id;
@@ -24,12 +24,12 @@ export class mentors {
   export class mentorForm {
     public name: string;
     public email: string;
-    public age: string;
+    public age: number;
     public gender: string;
     constructor(
       name: string,
       email: string,
-      age: string,
+      age: number,
       gender: string
     ) {
       this.name = name;
@@ -43,12 +43,12 @@ export class mentors {
    export class FilterForm {
     public name: string;
     public email: string;
-    public age: string;
+    public age: number;
     public gender: string;
     constructor(
       name: string,
       email: string,
-      age: string,
+      age: number,
       gender: string
     ) {
       this.name = name;

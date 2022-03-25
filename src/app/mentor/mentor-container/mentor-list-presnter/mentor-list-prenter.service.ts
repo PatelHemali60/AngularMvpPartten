@@ -1,21 +1,21 @@
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { ComponentRef, Injectable, Output } from '@angular/core';
-import {  observable, Observable, Subject, take } from 'rxjs';
-import { FilterForm, mentors } from '../../mentor.model';
+import { observable, Observable, Subject, take } from 'rxjs';
+import { FilterForm, mentorForm, mentors } from '../../mentor.model';
 import { FilterPresentationComponent } from '../mentor-list-presentation/filter-presentation/filter-presentation.component';
 
 @Injectable()
 export class MentorListPrenterService {
 
 
-  private  FILTER : Subject<FilterForm>;
-  public Filter$ : Observable<FilterForm>;
+  private FILTER: Subject<mentors[]>;
+  public Filter$: Observable<mentors[]>;
 
   private delete: Subject<number>;
   public delete$: Observable<number>;
 
-  
+
   // private $filterdata :Subject<FilterForm>;
 
 
@@ -58,7 +58,7 @@ export class MentorListPrenterService {
         mentors.id?.toString().includes(searchItem) ||
         mentors.name?.toLowerCase().includes(searchItem) ||
         mentors.email?.toLowerCase().includes(searchItem) ||
-        mentors.age?.toLowerCase().includes(searchItem) ||
+        mentors.age ||
         mentors.gender?.toLowerCase().includes(searchItem)
       ) {
         return mentors;
@@ -70,13 +70,17 @@ export class MentorListPrenterService {
 
   //ovelay openlist
 
-  public openFilterForm() {
+  public openFilterForm(currentList: mentors[]) {
+
+    console.log(currentList, 'prenster');
 
     let componentRef: ComponentRef<FilterPresentationComponent>;
     let overlayRef: OverlayRef;
     // set overlay config
     let overlayConfig: OverlayConfig = new OverlayConfig();
+
     overlayConfig.hasBackdrop = true;
+    overlayConfig.positionStrategy = this.overlay.position().global().centerHorizontally().right()
 
 
     // create overlay reference
@@ -91,10 +95,31 @@ export class MentorListPrenterService {
       overlayRef.detach();
     })
 
-    //add form data
-    componentRef.instance.addData.subscribe((res) => {
-     console.log(res);
-     this.FILTER.next(res);
+    //add form data write logic for filter data in presenter
+    componentRef.instance.addData.subscribe((newList: mentors[]) => {
+     
+     
+      console.log(newList);
+
+      let dataKey = Object.keys(currentList[0]);
+
+      let newListData = [...currentList];
+
+      //  let listData = newList ;
+      //logic for filter list
+      dataKey.forEach((item: any) => {
+        if (newList[item]) {
+          console.log(newList[item])
+          newListData = newListData.filter((data: any) => {
+            console.log(data[item])
+            return data[item] == newList[item]
+          });
+        }
+      });
+
+
+      this.FILTER.next(newListData);
+      overlayRef.detach();
     })
 
     // debugger
