@@ -1,14 +1,17 @@
 export class upload {
-    public idx: number;
+    public id: number;
     public file: any;
+    public name: any;
 
     constructor(
-        idx: number,
+        id: number,
         file: any,
+        name : string
 
     ) {
-        this.idx = idx;
+        this.id = id;
         this.file = file;
+        this.name = String;
     }
 }
 
@@ -18,7 +21,7 @@ export class files {
 
     constructor(
         id: number,
-        name: File,
+        name: any,
     ) {
         this.id = id;
         this.name = name;

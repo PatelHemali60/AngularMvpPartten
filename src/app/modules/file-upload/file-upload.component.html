@@ -23,7 +23,7 @@
         </div>
     </div>
     <label class="btn btn-default m-3">
-        <input type="file" multiple (change)="selectFiles($event)"    />
+        <input type="file" multiple (change)="selectFiles($event)" />
     </label>
     <button class="btn btn-success" [disabled]="!selectedFiles" (click)="uploadFiles()">
         Upload
@@ -31,11 +31,17 @@
     <div class="alert alert-light" role="alert">{{ message }}</div>
     <div class="card  m2">
         <div class="card-header">List of Files</div>
-        <ul class="list-group list-group-flush" *ngFor="let file of fileInfos | async">
-            <li class="list-group-item">
-                <a href="{{ file.url }}">{{ file.name }}</a>
-            </li>
-        </ul>
+        <table class="list-group list-group-flush" *ngFor="let file of fileInfos | async">
+            <tr>
+                <th>id</th>
+                <th>name</th>
+            </tr>
+            <tr>
+                <td><a href="#">{{ file.id }}</a></td>
+                <td> <a href="#">{{ file.name }}</a></td>
+
+            </tr>
+        </table>
     </div>
 
 </div>

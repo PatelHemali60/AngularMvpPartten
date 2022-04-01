@@ -1,270 +1,271 @@
-{
-  "gender": [
-    {
-      "id": 1,
-      "name": "male"
-    },
-    {
-      "id": 2,
-      "name": "female"
-    },
-    {
-      "id": 3,
-      "name": "other"
-    }
-  ],
-  "departments": [
-    {
-      "id": 1,
-      "name": "Frontend"
-    },
-    {
-      "id": 2,
-      "name": "QA"
-    },
-    {
-      "id": 3,
-      "name": "Database"
-    },
-    {
-      "id": 4,
-      "name": ".Net"
-    },
-    {
-      "id": 5,
-      "name": "UX"
-    },
-    {
-      "id": 6,
-      "name": "Mobile"
-    }
-  ],
-  "users": [
-    {
-      "firstname": "hemali",
-      "lastname": "patel",
-      "email": "hemali23@email.com",
-      "phoneNo": "(785) 554-5455",
-      "gender": "female",
-      "doj": "2022-01-03",
-      "department": 3,
-      "id": 5
-    },
-    {
-      "firstname": "priyank",
-      "lastname": "parmar",
-      "email": "priyank@email.com",
-      "phoneNo": "(785) 554-5455",
-      "gender": "male",
-      "doj": "2022-01-03",
-      "department": 3,
-      "id": 6
-    },
-    {
-      "firstname": "hinal",
-      "lastname": "patel",
-      "email": "hinal@email.com",
-      "phoneNo": "(785) 554-5455",
-      "gender": "female",
-      "doj": "2022-01-03",
-      "department": 3,
-      "id": 7
-    },
-    {
-      "firstname": "piku",
-      "lastname": "patel",
-      "email": "piku@email.com",
-      "phoneNo": "(785) 554-5455",
-      "gender": "female",
-      "doj": "2022-01-03",
-      "department": 3,
-      "id": 8
-    },
-    {
-      "firstname": "aayushi",
-      "lastname": "parmar",
-      "email": "aayushi.parmar@email.com",
-      "phoneNo": "(785) 554-5455",
-      "gender": "female",
-      "doj": "2022-01-03",
-      "department": 3,
-      "id": 9
-    },
-    {
-      "firstname": "viru",
-      "lastname": "patel",
-      "email": "viru.patel@email.com",
-      "phoneNo": "(785) 554-5455",
-      "gender": "male",
-      "doj": "2022-01-03",
-      "department": 3,
-      "id": 10
-    },
-    {
-      "firstname": "dasfs",
-      "lastname": "fgrsreg",
-      "email": "patelhemu60@gmail.com",
-      "phoneNo": "(124) 354-5353",
-      "gender": "male",
-      "doj": "2022-03-31",
-      "department": 1,
-      "id": 11
-    }
-  ],
-  "resume": [
-    {
-      "username": "hemali",
-      "email": "hemu60@gmail.com",
-      "contactNo": "8123456778",
-      "postname": "Frontend Developer",
-      "skills": [
-        {
-          "technicalSkills": "html"
-        }
-      ],
-      "experiences": [
-        {
-          "companyName": "1Rivet",
-          "years": "2021",
-          "post": "UI"
-        }
-      ],
-      "educations": [
-        {
-          "schoolName": "GRY",
-          "major": "fdf",
-          "cgpa": "10"
-        }
-      ],
-      "id": 1
-    }
-  ],
-  "employees": [
-    {
-      "name": "hemali Patel",
-      "email": "cp221740@gmail.com",
-      "mobile": "8347892046",
-      "city": "gandevi",
-      "gender": 2,
-      "department": 3,
-      "hireDate": "2022-02-01",
-      "isPermanent": true,
-      "id": 3
-    },
-    {
-      "name": "hemain",
-      "email": "hemin@mail.com",
-      "mobile": "8347892046",
-      "city": "bilimora",
-      "gender": 1,
-      "department": 1,
-      "hireDate": "2022-02-03",
-      "isPermanent": true,
-      "id": 4
-    },
-    {
-      "name": "piku Patel",
-      "email": "piku@gmail.com",
-      "mobile": "8347892046",
-      "city": "bilimora",
-      "gender": 1,
-      "department": 1,
-      "hireDate": "2022-02-03",
-      "isPermanent": false,
-      "id": 5
-    },
-    {
-      "name": "dhwani",
-      "email": "dhwani40@gmail.com",
-      "mobile": "8347892046",
-      "city": "dungari",
-      "gender": 1,
-      "department": 1,
-      "hireDate": null,
-      "isPermanent": false,
-      "id": 6
-    }
-  ],
-  "mentors": [
-    {
-      "name": "hemaliii",
-      "email": "patelhemali60@gmail.com",
-      "age": "22",
-      "gender": "Female",
-      "id": 2
-    },
-    {
-      "name": "hinali",
-      "email": "patelhinali60@gmail.com",
-      "age": "23",
-      "gender": "Female",
-      "id": 3
-    },
-    {
-      "name": "viru",
-      "email": "patelviral60@gmail.com",
-      "age": "23",
-      "gender": "Male",
-      "id": 4
-    },
-    {
-      "name": "Sonal",
-      "email": "patelsonal60@gmail.com",
-      "age": "25",
-      "gender": "Female",
-      "id": 5
-    },
-    {
-      "name": "hinal",
-      "email": "patelhinal@gmail.com",
-      "age": "26",
-      "gender": "Male",
-      "id": 6
-    },
-    {
-      "name": "jigar",
-      "email": "pateljiagr60@gmail.com",
-      "age": "24",
-      "gender": "Male",
-      "id": 7
-    },
-    {
-      "name": "himani",
-      "email": "patelhimani@gmail.com",
-      "age": "23",
-      "gender": "Female",
-      "id": 8
-    },
-    {
-      "name": "hemu",
-      "email": "patelhemu1160@gmail.com",
-      "age": "22",
-      "gender": "Female",
-      "id": 9
-    },
-    {
-      "name": "hemali",
-      "email": "patelhemu1160@gmail.com",
-      "age": "26",
-      "gender": "Female",
-      "id": 10
-    }
-  ],
-
-
-  "files":[
-    {
-      "name": "Mockup.jpg",
-      "id": 1
-    }
-  ],
-    "upload":[
-      {
-        "fileName": "Mockup.jpg",
-        "id": 1
-
-      }
    
-
-  ]
-}
+{
+    "gender": [
+      {
+        "id": 1,
+        "name": "male"
+      },
+      {
+        "id": 2,
+        "name": "female"
+      },
+      {
+        "id": 3,
+        "name": "other"
+      }
+    ],
+    "departments": [
+      {
+        "id": 1,
+        "name": "Frontend"
+      },
+      {
+        "id": 2,
+        "name": "QA"
+      },
+      {
+        "id": 3,
+        "name": "Database"
+      },
+      {
+        "id": 4,
+        "name": ".Net"
+      },
+      {
+        "id": 5,
+        "name": "UX"
+      },
+      {
+        "id": 6,
+        "name": "Mobile"
+      }
+    ],
+    "users": [
+      {
+        "firstname": "hemali",
+        "lastname": "patel",
+        "email": "hemali23@email.com",
+        "phoneNo": "(785) 554-5455",
+        "gender": "female",
+        "doj": "2022-01-03",
+        "department": 3,
+        "id": 5
+      },
+      {
+        "firstname": "priyank",
+        "lastname": "parmar",
+        "email": "priyank@email.com",
+        "phoneNo": "(785) 554-5455",
+        "gender": "male",
+        "doj": "2022-01-03",
+        "department": 3,
+        "id": 6
+      },
+      {
+        "firstname": "hinal",
+        "lastname": "patel",
+        "email": "hinal@email.com",
+        "phoneNo": "(785) 554-5455",
+        "gender": "female",
+        "doj": "2022-01-03",
+        "department": 3,
+        "id": 7
+      },
+      {
+        "firstname": "piku",
+        "lastname": "patel",
+        "email": "piku@email.com",
+        "phoneNo": "(785) 554-5455",
+        "gender": "female",
+        "doj": "2022-01-03",
+        "department": 3,
+        "id": 8
+      },
+      {
+        "firstname": "aayushi",
+        "lastname": "parmar",
+        "email": "aayushi.parmar@email.com",
+        "phoneNo": "(785) 554-5455",
+        "gender": "female",
+        "doj": "2022-01-03",
+        "department": 3,
+        "id": 9
+      },
+      {
+        "firstname": "viru",
+        "lastname": "patel",
+        "email": "viru.patel@email.com",
+        "phoneNo": "(785) 554-5455",
+        "gender": "male",
+        "doj": "2022-01-03",
+        "department": 3,
+        "id": 10
+      },
+      {
+        "firstname": "dasfs",
+        "lastname": "fgrsreg",
+        "email": "patelhemu60@gmail.com",
+        "phoneNo": "(124) 354-5353",
+        "gender": "male",
+        "doj": "2022-03-31",
+        "department": 1,
+        "id": 11
+      }
+    ],
+    "resume": [
+      {
+        "username": "hemali",
+        "email": "hemu60@gmail.com",
+        "contactNo": "8123456778",
+        "postname": "Frontend Developer",
+        "skills": [
+          {
+            "technicalSkills": "html"
+          }
+        ],
+        "experiences": [
+          {
+            "companyName": "1Rivet",
+            "years": "2021",
+            "post": "UI"
+          }
+        ],
+        "educations": [
+          {
+            "schoolName": "GRY",
+            "major": "fdf",
+            "cgpa": "10"
+          }
+        ],
+        "id": 1
+      }
+    ],
+    "employees": [
+      {
+        "name": "hemali Patel",
+        "email": "cp221740@gmail.com",
+        "mobile": "8347892046",
+        "city": "gandevi",
+        "gender": 2,
+        "department": 3,
+        "hireDate": "2022-02-01",
+        "isPermanent": true,
+        "id": 3
+      },
+      {
+        "name": "hemain",
+        "email": "hemin@mail.com",
+        "mobile": "8347892046",
+        "city": "bilimora",
+        "gender": 1,
+        "department": 1,
+        "hireDate": "2022-02-03",
+        "isPermanent": true,
+        "id": 4
+      },
+      {
+        "name": "piku Patel",
+        "email": "piku@gmail.com",
+        "mobile": "8347892046",
+        "city": "bilimora",
+        "gender": 1,
+        "department": 1,
+        "hireDate": "2022-02-03",
+        "isPermanent": false,
+        "id": 5
+      },
+      {
+        "name": "dhwani",
+        "email": "dhwani40@gmail.com",
+        "mobile": "8347892046",
+        "city": "dungari",
+        "gender": 1,
+        "department": 1,
+        "hireDate": null,
+        "isPermanent": false,
+        "id": 6
+      }
+    ],
+    "mentors": [
+      {
+        "name": "hemaliii",
+        "email": "patelhemali60@gmail.com",
+        "age": "22",
+        "gender": "Female",
+        "id": 2
+      },
+      {
+        "name": "hinali",
+        "email": "patelhinali60@gmail.com",
+        "age": "23",
+        "gender": "Female",
+        "id": 3
+      },
+      {
+        "name": "viru",
+        "email": "patelviral60@gmail.com",
+        "age": "23",
+        "gender": "Male",
+        "id": 4
+      },
+      {
+        "name": "Sonal",
+        "email": "patelsonal60@gmail.com",
+        "age": "25",
+        "gender": "Female",
+        "id": 5
+      },
+      {
+        "name": "hinal",
+        "email": "patelhinal@gmail.com",
+        "age": "26",
+        "gender": "Male",
+        "id": 6
+      },
+      {
+        "name": "jigar",
+        "email": "pateljiagr60@gmail.com",
+        "age": "24",
+        "gender": "Male",
+        "id": 7
+      },
+      {
+        "name": "himani",
+        "email": "patelhimani@gmail.com",
+        "age": "23",
+        "gender": "Female",
+        "id": 8
+      },
+      {
+        "name": "hemu",
+        "email": "patelhemu1160@gmail.com",
+        "age": "22",
+        "gender": "Female",
+        "id": 9
+      },
+      {
+        "name": "hemali",
+        "email": "patelhemu1160@gmail.com",
+        "age": "26",
+        "gender": "Female",
+        "id": 10
+      }
+    ],
+  
+  
+    "files":[
+      {
+        "name": "Mockup.jpg",
+        "id": 1
+      }
+    ],
+      "upload":[
+        {
+          "fileName": "Mockup.jpg",
+          "id": 1
+  
+        }
+     
+  
+    ]
+  }

@@ -19,7 +19,7 @@ export class FileUploadComponent implements OnInit {
   constructor(private uploadService:UploadFilesService) { }
 
   ngOnInit() {
-    console.log(this.fileInfos);
+    // console.log(this.fileInfos);
     this.fileInfos = this.uploadService.getFiles();
   }
 
@@ -30,7 +30,7 @@ export class FileUploadComponent implements OnInit {
   }
 
   uploadFiles() {
-  
+  console.log('ok')
     this.message = '';
     for (let i = 0; i < this.selectedFiles.length; i++) {
       this.upload(i, this.selectedFiles[i]);
@@ -38,7 +38,9 @@ export class FileUploadComponent implements OnInit {
   }
 
 
-  upload(idx: number, file: File) {
+  upload(idx: number, file: any) {
+
+    console.log('ok')
   
     this.progressInfos[idx] = [{ value: 0, fileName: file.name }];
     this.uploadService.upload(file).subscribe(
