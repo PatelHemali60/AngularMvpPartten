@@ -56,6 +56,9 @@ const routes: Routes = [
  //parent for inputoutput demo
   { path: 'Parent', loadChildren: () => import('./modules/parent/parent.module').then(m => m.ParentModule) },
   
+  //fileupload path
+  { path: 'fileupload', loadChildren: () => import('./modules/file-upload/file-upload.module').then(m => m.FileUploadModule) },
+  
   {path: '**', component: PagenotFoundComponent }
 
 ];

@@ -99,7 +99,7 @@ export class MentorListPrenterService {
     componentRef.instance.addData.subscribe((newList: mentors[]) => {
      
      
-      console.log(newList);
+      console.log(newList ,'hey list');
 
       let dataKey = Object.keys(currentList[0]);
 

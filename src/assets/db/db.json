@@ -249,5 +249,22 @@
       "gender": "Female",
       "id": 10
     }
+  ],
+
+
+  "files":[
+    {
+      "name": "Mockup.jpg",
+      "id": 1
+    }
+  ],
+    "upload":[
+      {
+        "fileName": "Mockup.jpg",
+        "id": 1
+
+      }
+   
+
   ]
 }
